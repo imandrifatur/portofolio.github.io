@@ -1,0 +1,21 @@
+.jumbotron {
+  padding-top: 6rem;
+  background-color: #dadddd;
+}
+
+#project {
+  background-color: #dadddd;
+}
+
+.card {
+  height: 100%;
+}
+
+.card-img-top {
+  height: 10rem;
+  object-fit: cover;
+}
+
+section {
+  padding-top: 5rem;
+}
