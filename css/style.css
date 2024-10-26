@@ -1,21 +1,283 @@
-.jumbotron {
-  padding-top: 6rem;
-  background-color: #dadddd;
+/* Global settings */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f4f6f9;
+  margin: 0;
+  padding-top: 70px;
 }
 
+h2 {
+  color: #333;
+  font-weight: bold;
+}
+
+/* Navbar 3D dengan bayangan */
+.navbar {
+  background-color: hsl(133, 100%, 49%);
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3), 0px -2px 10px rgba(3, 255, 36, 0.719);
+  transform: translateZ(5px);
+  transition: all 0.4s ease;
+}
+
+/* Hover pada Navbar */
+.navbar:hover {
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5), 0px -4px 15px rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px) translateZ(8px);
+}
+
+/* Brand link efek 3D */
+.navbar-brand {
+  font-weight: bold;
+  color: #333;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  transform: translateZ(3px);
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #222;
+  transform: translateZ(6px);
+}
+
+/* Navbar item link */
+.nav-link {
+  font-weight: 500;
+  color: #444;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link:hover {
+  color: #222;
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+  transform: translateZ(3px);
+}
+
+/* Navbar-toggler button */
+.navbar-toggler {
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Efek responsive pada mobile */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 15px 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    transform: none;
+  }
+
+  .nav-link {
+    margin-top: 10px;
+    padding: 12px;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-toggler {
+    margin-top: 5px;
+  }
+}
+
+
+/* Jumbotron dengan efek 3D */
+.jumbotron {
+  background: linear-gradient(135deg, #3a4c63, #5c6e87);
+  color: #ffffff;
+  padding: 50px 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: all 0.4s ease;
+}
+
+/* Efek bayangan saat hover */
+.jumbotron:hover {
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.3);
+  transform: translateY(-10px);
+}
+
+/* Gambar dengan bayangan */
+.jumbotron img {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  transform: translateZ(10px);
+  transition: transform 0.3s;
+}
+
+/* Hover pada gambar agar tampak lebih 3D */
+.jumbotron img:hover {
+  transform: scale(1.05) translateZ(15px);
+}
+
+/* Teks di dalam Jumbotron */
+.jumbotron h1,
+.jumbotron p {
+  font-weight: 300;
+  margin: 0;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  transform: translateZ(5px);
+}
+
+/* Efek hover pada teks */
+.jumbotron h1:hover, .jumbotron p:hover {
+  transform: translateZ(10px);
+  color: #e3e9f1;
+  transition: all 0.3s ease;
+}
+
+/* Efek SVG atau elemen grafis lainnya */
+.jumbotron svg {
+  margin-top: 20px;
+  transform: translateZ(8px);
+}
+
+/* About Section */
+#about {
+  padding: 50px 0;
+  background-color: #e7ebf0;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+#about .row p {
+  line-height: 1.6;
+  text-align: justify;
+}
+
+#about svg {
+  margin-top: 30px;
+}
+
+/* Project Section */
 #project {
-  background-color: #dadddd;
+  padding: 50px 0;
+}
+
+#project h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
 }
 
 .card {
-  height: 100%;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: #ffffff;
+}
+
+.card:hover {
+  transform: translateY(-10px);
 }
 
 .card-img-top {
-  height: 10rem;
-  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-section {
-  padding-top: 5rem;
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text {
+  color: #555;
+}
+
+.btn-primary {
+  background-color: #3a4c63;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #2c3d53;
+}
+
+/* Footer */
+footer {
+  background-color: #3a4c63;
+  color: #dadddd;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+  .jumbotron h1 {
+    font-size: 2.5rem;
+  }
+
+  #about .row .col-4 {
+    margin-bottom: 20px;
+  }
+
+  #about .row p {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  /* Gaya Umum */
+.row p {
+  line-height: 1.6;
+  color: #333;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Efek 3D pada Kolom */
+.col-4 {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover untuk Efek 3D */
+.col-4:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Gaya untuk Teks Kontak */
+.col-4 p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Gaya untuk Efek 3D pada Teks */
+.col-4 p:hover {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  color: #000;
+}
+
 }
